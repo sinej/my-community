@@ -1,41 +1,67 @@
 import {
   SafeAreaView,
   View,
-  Text,
-  TextInput,
   StyleSheet,
-  Button,
 } from 'react-native';
-import {useState} from "react";
 
 export default function HomeScreen() {
 
-  const [text, setText] = useState('');
   return (
-    <SafeAreaView>
-      <View style={styles.container}>
-        <Text style={styles.text}>텍스트</Text>
+    <SafeAreaView style={styles.parent}>
+      <View style={styles.container1}>
+        <Box></Box>
+        <Box></Box>
+        <Box></Box>
       </View>
-      <TextInput placeholder={'이름을 적어주세요'}
-                 value={text}
-                 onChangeText={(value) => setText(value)}
-                 style={styles.input}
-      />
-      <Button title="확인" onPress={() => console.log("Hello")} />
+      <View style={styles.container2}>
+        <Box></Box>
+        <Box></Box>
+        <Box></Box>
+      </View>
+      <View style={styles.container3}>
+        <Box></Box>
+        <Box></Box>
+        <Box></Box>
+      </View>
     </SafeAreaView>
   );
 }
 
+
+function Box() {
+  return <View style={styles.box} />;
+}
+
+
 const styles = StyleSheet.create({
-  container: {
-    backgroundColor: 'yellow',
+  parent: {
+    width: '100%',
+    height: '100%',
+    backgroundColor: '#fff',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: "space-between"
   },
-  text: {
-    color: '#000',
-    fontSize: 20,
+  container1: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'flex-end',
+    gap: 2,
   },
-  input: {
-    fontSize: 20,
-    fontWeight: 500,
-  }
+  container2: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-around'
+  },
+  container3: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'flex-start',
+    gap: 2,
+  },
+  box: {
+    width: 50,
+    height: 50,
+    backgroundColor: 'red',
+  },
 });
