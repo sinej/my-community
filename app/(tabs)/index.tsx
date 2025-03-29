@@ -14,7 +14,9 @@ export default function HomeScreen() {
     <SafeAreaView>
       <Pressable>
         <Text>홈스크린</Text>
-        <CustomButton label='버튼' onPress={() => {}} />
+        <CustomButton label='버튼'
+                      onPress={() => router.push('/auth')}
+        />
       </Pressable>
     </SafeAreaView>
   );
