@@ -15,7 +15,7 @@ const AuthScreen = (props: AuthScreenType) => {
           </View>
           <View style={styles.buttonContainer}>
             <CustomButton label='이메일로 로그인' />
-            <Link href='/' style={styles.signText}>이메일로 가입하기</Link>
+            <Link href='/login/auth' style={styles.signText}>이메일로 가입하기</Link>
           </View>
         </SafeAreaView>
     );
